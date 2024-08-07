@@ -5,10 +5,10 @@ export const MyContext = createContext("hello");
 
 const Example = () => {
   return (
-    <>
+    <MyContext.Provider value={value}>
       <Child />
       <OtherChild />
-    </>
+    </MyContext.Provider>
   );
 };
 

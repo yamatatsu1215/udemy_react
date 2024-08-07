@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { MyContext } from "../Example";
 
 const OtherChild = () => {
-  const [ value, setValue ] = useState(0);
+  const [,setState] = useContext(MyContext)
 
   const clickHandler = (e) => {
-    setValue((prev) => prev + 1);
+    setState((prev) => prev + 1);
   };
 
   return (
